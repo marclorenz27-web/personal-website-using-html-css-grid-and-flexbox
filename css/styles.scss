@@ -60,7 +60,7 @@ body {
             border: 3px solid black;    
             border-radius: 50%;
             justify-self: right;
-            max-width: 60%;
+            max-width: 100%;
         }
         .greeting {
             justify-self: center;
@@ -68,7 +68,7 @@ body {
             color: white;
 
             a.cta-btn:hover {
-                opacity: 0.7;
+                background-color: rgba(245, 198, 5, 0.90);
                 transition-delay: .1s;
             }
 
@@ -110,7 +110,7 @@ body {
         background-color: brown;
     }
     footer.footer {
-        height: 300px;
+        height: 400px;
         background-color: black;
         color: white;
         display: flex;
@@ -120,7 +120,7 @@ body {
 
 
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
         grid-template-areas: 
@@ -146,6 +146,7 @@ body {
 
         section#hero-section {
             grid-template-columns: 1fr;
+            height: 82vh;
             img {
                 justify-self: center;
             }

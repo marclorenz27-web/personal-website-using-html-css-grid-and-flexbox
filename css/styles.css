@@ -78,7 +78,7 @@ body section#hero-section img {
   border-radius: 50%;
   -ms-grid-column-align: right;
       justify-self: right;
-  max-width: 60%;
+  max-width: 100%;
 }
 
 body section#hero-section .greeting {
@@ -91,7 +91,7 @@ body section#hero-section .greeting {
 }
 
 body section#hero-section .greeting a.cta-btn:hover {
-  opacity: 0.7;
+  background-color: rgba(245, 198, 5, 0.9);
   -webkit-transition-delay: .1s;
           transition-delay: .1s;
 }
@@ -144,7 +144,7 @@ body section#about-me {
 }
 
 body footer.footer {
-  height: 300px;
+  height: 400px;
   background-color: black;
   color: white;
   display: -webkit-box;
@@ -159,7 +159,7 @@ body footer.footer {
   grid-area: footer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -184,6 +184,7 @@ body footer.footer {
   body section#hero-section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    height: 82vh;
   }
   body section#hero-section img {
     -ms-grid-column-align: center;
