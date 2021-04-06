@@ -1,0 +1,156 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: Roboto;
+    scroll-behavior: smooth;
+    background-color: #efefef;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
+    grid-template-areas: 
+    "navigation navigation navigation navigation"
+    "hero-section hero-section hero-section hero-section"
+    "portfolio portfolio portfolio portfolio"
+    "skill-set skill-set about-me about-me"
+    "footer footer footer footer";
+
+    nav.navigation {
+        grid-area: navigation;
+        background-color: black;
+        padding: 10px;
+
+        ul {
+            max-width: 100%;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            li {
+                text-transform: uppercase;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                a:hover {
+                    color: blue;
+                    transition-delay: .1s;
+                }
+            }
+            li.mobile-menu-button {
+                display: none;
+            }
+        }
+    }
+    
+    section#hero-section {
+        grid-area: hero-section;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-image: url(https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+        img {
+            border: 3px solid black;    
+            border-radius: 50%;
+            justify-self: right;
+            max-width: 60%;
+        }
+        .greeting {
+            justify-self: center;
+            align-self: center;
+            color: white;
+
+            a.cta-btn:hover {
+                opacity: 0.7;
+                transition-delay: .1s;
+            }
+
+            a:not(.social-btn) {
+                display: block;
+                background-color: #F5C605;
+                padding: 10px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px;
+                color: black;
+                margin: .5em 0;
+            }
+
+            a.social-btn:hover {
+                color: blue;
+                transition-delay: .1s;
+            }
+
+            a:not(.cta-btn){
+                color: white;
+                font-size: 3em;
+                margin: 0 12px 0 0px;
+            }
+        }
+    }
+
+    section#portfolio {
+        grid-area: portfolio;
+        background-color: blue;
+    }
+
+    section#skill-set{
+        grid-area: skill-set;
+        background-color: gray;
+    }
+
+    section#about-me{
+        grid-area: about-me;
+        background-color: brown;
+    }
+    footer.footer {
+        background-color: red;
+        grid-area: footer;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
+        grid-template-areas: 
+        "navigation"
+        "hero-section"
+        "portfolio"
+        "skill-set"
+        "about-me"
+        "footer";
+
+        nav.navigation {
+            ul {
+                justify-content: space-between;
+                align-items: center;
+                li.mobile-menu-button {
+                    display: block;
+                }
+            }
+            li:not(.name) {
+                display: none;
+            }
+        }
+
+        section#hero-section {
+            height: 82vh;
+            grid-template-columns: 1fr;
+            img {
+                justify-self: center;
+            }
+            div#greeting {
+                align-self: center;
+                border: 1px solid black;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  font-family: Roboto;
+  scroll-behavior: smooth;
+  background-color: #efefef;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr (1fr)[3];
+      grid-template-columns: 2fr repeat(3, 1fr);
+  -ms-grid-rows: 1fr 2fr 3fr 4fr 2fr;
+      grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
+      grid-template-areas: "navigation navigation navigation navigation" "hero-section hero-section hero-section hero-section" "portfolio portfolio portfolio portfolio" "skill-set skill-set about-me about-me" "footer footer footer footer";
+}
+
+body nav.navigation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: navigation;
+  background-color: black;
+  padding: 10px;
+}
+
+body nav.navigation ul {
+  max-width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body nav.navigation ul li {
+  text-transform: uppercase;
+}
+
+body nav.navigation ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+body nav.navigation ul li a:hover {
+  color: blue;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+body nav.navigation ul li.mobile-menu-button {
+  display: none;
+}
+
+body section#hero-section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: hero-section;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  background-image: url(https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body section#hero-section img {
+  border: 3px solid black;
+  border-radius: 50%;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  max-width: 60%;
+}
+
+body section#hero-section .greeting {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+body section#hero-section .greeting a.cta-btn:hover {
+  opacity: 0.7;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+body section#hero-section .greeting a:not(.social-btn) {
+  display: block;
+  background-color: #F5C605;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  margin: .5em 0;
+}
+
+body section#hero-section .greeting a.social-btn:hover {
+  color: blue;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+body section#hero-section .greeting a:not(.cta-btn) {
+  color: white;
+  font-size: 3em;
+  margin: 0 12px 0 0px;
+}
+
+body section#portfolio {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: portfolio;
+  background-color: blue;
+}
+
+body section#skill-set {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: skill-set;
+  background-color: gray;
+}
+
+body section#about-me {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: about-me;
+  background-color: brown;
+}
+
+body footer.footer {
+  background-color: red;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr 3fr 4fr 2fr;
+        grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
+        grid-template-areas: "navigation" "hero-section" "portfolio" "skill-set" "about-me" "footer";
+  }
+  body nav.navigation ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body nav.navigation ul li.mobile-menu-button {
+    display: block;
+  }
+  body nav.navigation li:not(.name) {
+    display: none;
+  }
+  body section#hero-section {
+    height: 82vh;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body section#hero-section img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  body section#hero-section div#greeting {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border: 1px solid black;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
