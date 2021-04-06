@@ -124,45 +124,6 @@ body section#portfolio {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: portfolio;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-}
-
-body section#portfolio div.container {
-  margin: 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 8fr;
-      grid-template-rows: 1fr 8fr;
-}
-
-body section#portfolio div.container h2 {
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-body section#portfolio div.container .projects {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  grid-gap: 30px;
-}
-
-body section#portfolio div.container .projects .project-item {
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-body section#portfolio div.container .projects .project-item img {
-  width: 100%;
 }
 
 body section#skill-set {
