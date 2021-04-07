@@ -111,8 +111,14 @@ body {
             div.project-tile {
                 border-radius: 5px;
                 background-color: white;
-                padding: 1.5em;
+                padding: 1em;
+                height: 350px;
                 box-shadow: 0px 0px 6px 0px #000000;
+
+                img {
+                    width: 100%;
+                    border-radius: 5px;
+                }
             }
         }
     }
