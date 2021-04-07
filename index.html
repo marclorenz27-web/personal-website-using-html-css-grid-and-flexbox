@@ -29,19 +29,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script>
-
-        function toggleMenu() {
-            let mobileMenu = document.querySelector('#mobile-nav');
-            if (mobileMenu.classList == '') {
-                mobileMenu.classList.add('show');
-            }
-            else {
-                mobileMenu.classList.remove('show');
-            }
-            console.log('Button Clicked');
-        }
-    </script>
 </head>
 
 <body>
@@ -54,7 +41,7 @@
             <li class="mobile-menu-button"><button onclick="toggleMenu()"><i class="fas fa-bars"></i></button></li>
         </ul>
     </nav>
-    <nav id="mobile-nav">
+    <nav id="mobile-nav" style="display:none">
         <ul>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#skill-set">Skill Set</a></li>
@@ -82,32 +69,36 @@
         <h2>Portfolio</h2>
     </section>
 
-    <section id="skill-set" class="portion">
-        <h2>Skill Set</h2>
-        <h3>I have known and used the following:</h3>
-        <p><b>Languages:</b> HTML, CSS, JavaScript, PHP, MySQL, XML</p>
-        <p><b>Frameworks and Technologies:</b> Bootstrap, Wordpress, Shopify</p>
-        <p><b>Tools:</b> VSCode, Postman, Codepen, Github, Webflow, Webaim Contrast Checker (for A/AA/AAA WCAG),
-            Google Fonts, TinyPNG</p>
-    </section>
+    <div class="skill-and-about-wrapper">
+        <section id="skill-set" class="portion">
+            <h2>Skill Set</h2>
+            <h3>I have known and used the following:</h3>
+            <p><b>Languages:</b> HTML, CSS, JavaScript, PHP, MySQL, XML</p>
+            <p><b>Frameworks and Technologies:</b> Bootstrap, Wordpress, Shopify</p>
+            <p><b>Tools:</b> VSCode, Postman, Codepen, Github, Webflow, Webaim Contrast Checker (for A/AA/AAA WCAG),
+                Google Fonts, TinyPNG</p>
+        </section>
 
-    <section id="about-me" class="portion">
-        <h2>About Me</h2>
-        <p>I am a BS Computer Science graduate from De La Salle Lipa. From my previous job, I have worked remotely
-            as an Ecommerce Site Developer and Google Analytics & Google Tag Manager technician. I have a Moderate
-            Protan Colorblindness and this condition inspires me to become a front end developer who creates user
-            experiences and user interfaces that are accessible to everyone.</p>
-    </section>
-
+        <section id="about-me" class="portion">
+            <h2>About Me</h2>
+            <p>I am a BS Computer Science graduate from De La Salle Lipa. From my previous job, I have worked remotely
+                as an Ecommerce Site Developer and Google Analytics & Google Tag Manager technician. I have a Moderate
+                Protan Colorblindness and this condition inspires me to become a front end developer who creates user
+                experiences and user interfaces that are accessible to everyone.</p>
+        </section>
+    </div>
     <footer class="footer">
         <div class="footer-contacts">
             <h2>Marc Lorenz Comia - aspiring front end developer</h2>
-            <a class="footer-social-btn" href="https://www.linkedin.com/in/marc-lorenz-comia-24514117a/" target="_blank"
-                title="LinkedIn Profile - Marc Lorenz Comia"><i class="fab fa-linkedin"></i></a>
-            <a class="footer-social-btn" href="https://github.com/marclorenz27-web" target="_blank"><i
-                    class="fab fa-github" title="Github Profile - Marc Lorenz Comia"></i></a>
-            <a class="footer-social-btn" href="mailto:comia.marclorenz@gmail.com"
-                title="Email Address - comia.marclorenz@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div>
+                <a class="footer-social-btn" href="https://www.linkedin.com/in/marc-lorenz-comia-24514117a/"
+                    target="_blank" title="LinkedIn Profile - Marc Lorenz Comia"><i class="fab fa-linkedin"></i></a>
+                <a class="footer-social-btn" href="https://github.com/marclorenz27-web" target="_blank"><i
+                        class="fab fa-github" title="Github Profile - Marc Lorenz Comia"></i></a>
+                <a class="footer-social-btn" href="mailto:comia.marclorenz@gmail.com"
+                    title="Email Address - comia.marclorenz@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+
         </div>
         <div class="footer-nav-container">
             <nav>
