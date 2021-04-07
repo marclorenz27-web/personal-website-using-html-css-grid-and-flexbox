@@ -62,9 +62,6 @@ body {
             }
         }
     }
-    .hidden {
-        display: hidden;
-    }
     section#hero-section {
         grid-area: hero-section;
         display: grid;
@@ -161,14 +158,16 @@ body {
                 display: none;
             }
         }
-        nav.mobile-nav {
-            display: hidden;
+        nav#mobile-nav {
+            display: none;
             width: 100%;
+            background-color: white;
             ul {
                 margin-left: 1em;
+                list-style-type: none;
             }
         }
-        nav.mobile-nav.show {
+        nav#mobile-nav.show {
             display: block;
         }
 

@@ -77,10 +77,6 @@ body nav.mobile-nav ul li a {
   color: black;
 }
 
-body .hidden {
-  display: hidden;
-}
-
 body section#hero-section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -203,14 +199,16 @@ body footer.footer {
   body nav.navigation li:not(.name) {
     display: none;
   }
-  body nav.mobile-nav {
-    display: hidden;
+  body nav#mobile-nav {
+    display: none;
     width: 100%;
+    background-color: white;
   }
-  body nav.mobile-nav ul {
+  body nav#mobile-nav ul {
     margin-left: 1em;
+    list-style-type: none;
   }
-  body nav.mobile-nav.show {
+  body nav#mobile-nav.show {
     display: block;
   }
   body section#hero-section {

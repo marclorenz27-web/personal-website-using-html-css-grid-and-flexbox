@@ -30,14 +30,16 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script>
+
         function toggleMenu() {
-            let mobileMenu = document.querySelector('.mobile-nav');
-            if (mobileMenu.classList == 'show') {
-                mobileMenu.classList.remove('show');
-            }
-            else {
+            let mobileMenu = document.querySelector('#mobile-nav');
+            if (mobileMenu.classList == '') {
                 mobileMenu.classList.add('show');
             }
+            else {
+                mobileMenu.classList.remove('show');
+            }
+            console.log('Button Clicked');
         }
     </script>
 </head>
@@ -52,7 +54,7 @@
             <li class="mobile-menu-button"><button onclick="toggleMenu()"><i class="fas fa-bars"></i></button></li>
         </ul>
     </nav>
-    <nav class="mobile-nav">
+    <nav id="mobile-nav">
         <ul>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#skill-set">Skill Set</a></li>
