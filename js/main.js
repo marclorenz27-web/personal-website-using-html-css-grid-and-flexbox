@@ -1,12 +1,6 @@
-{/* <script>
-    function toggleMenu() {
-        let mobileMenu = document.querySelector('#mobile-nav');
-    if (mobileMenu.classList == '') {
-        mobileMenu.classList.add('show');
-    }
-    else {
-        mobileMenu.classList.remove('show');
-    }
-    console.log('Button Clicked');
-}
-</script> */}
+const mobileMenuIcon = document.querySelector('button#hamburger-menu-icon')
+mobileMenuIcon.addEventListener('click', function () {
+    let menu = document.querySelector('#mobile-nav');
+    menu.classList.toggle('show');
+    console.log(menu)
+});
