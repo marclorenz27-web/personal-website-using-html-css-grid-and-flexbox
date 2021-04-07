@@ -138,16 +138,27 @@ body section#portfolio div#projects {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (300px)[2];
-      grid-template-rows: repeat(2, 300px);
   grid-gap: 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  grid-auto-rows: minmax(380px, 400px);
 }
 
 body section#portfolio div#projects div.project-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-radius: 5px;
   background-color: white;
   padding: 1em;
-  height: 350px;
   -webkit-box-shadow: 0px 0px 6px 0px #000000;
           box-shadow: 0px 0px 6px 0px #000000;
 }
@@ -155,6 +166,19 @@ body section#portfolio div#projects div.project-tile {
 body section#portfolio div#projects div.project-tile img {
   width: 100%;
   border-radius: 5px;
+}
+
+body section#portfolio div#projects div.project-tile h3 {
+  color: black;
+}
+
+body section#portfolio div#projects div.project-tile h3:hover {
+  text-decoration: underline;
+}
+
+body section#portfolio div#projects div.project-tile a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 body div.skill-and-about-wrapper {
@@ -186,8 +210,8 @@ body footer.footer {
   color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 body footer.footer .footer-contacts {
@@ -198,7 +222,6 @@ body footer.footer .footer-contacts {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px;
   width: 80%;
   margin: 0 auto;
 }
@@ -306,18 +329,22 @@ body footer.footer .footer-nav-container nav ul li a:hover {
   body section#portfolio div#projects {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    grid-auto-rows: 300px;
   }
   body footer.footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  body footer.footer .footer-contacts {
+    padding: 0;
   }
   body footer.footer .footer-nav-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 0;
+  }
+  body footer.footer .footer-nav-container nav ul {
+    padding: 0;
   }
   body footer.footer .footer-nav-container nav ul li {
     margin: .5em 0;
