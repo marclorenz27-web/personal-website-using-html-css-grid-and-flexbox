@@ -368,6 +368,9 @@ body footer.footer .footer-nav-container nav ul li a:hover {
   body section#hero-section img {
     -ms-grid-column-align: center;
         justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   body section#hero-section div#greeting {
     -ms-flex-item-align: center;
