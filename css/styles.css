@@ -204,11 +204,14 @@ body footer.footer {
     display: none;
   }
   body nav.mobile-nav {
-    display: block;
+    display: hidden;
     width: 100%;
   }
   body nav.mobile-nav ul {
     margin-left: 1em;
+  }
+  body nav.mobile-nav.show {
+    display: block;
   }
   body section#hero-section {
     -ms-grid-columns: 1fr;

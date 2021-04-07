@@ -137,8 +137,6 @@ body {
 
     }
 
-
-
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 2fr 3fr 4fr 2fr;
@@ -164,11 +162,14 @@ body {
             }
         }
         nav.mobile-nav {
-            display: block;
+            display: hidden;
             width: 100%;
             ul {
                 margin-left: 1em;
             }
+        }
+        nav.mobile-nav.show {
+            display: block;
         }
 
         section#hero-section {

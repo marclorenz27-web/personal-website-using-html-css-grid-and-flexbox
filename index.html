@@ -29,6 +29,17 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script>
+        function toggleMenu() {
+            let mobileMenu = document.querySelector('.mobile-nav');
+            if (mobileMenu.classList == 'show') {
+                mobileMenu.classList.remove('show');
+            }
+            else {
+                mobileMenu.classList.add('show');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -38,10 +49,10 @@
             <li class="menu-item1"><a href="#portfolio">Portfolio</a></li>
             <li class="menu-item2"><a href="#skill-set">Skill Set</a></li>
             <li class="menu-item3"><a href="#about-me">About Me</a></li>
-            <li class="mobile-menu-button"><button><i class="fas fa-bars"></i></button></li>
+            <li class="mobile-menu-button"><button onclick="toggleMenu()"><i class="fas fa-bars"></i></button></li>
         </ul>
     </nav>
-    <nav class="mobile-nav show">
+    <nav class="mobile-nav">
         <ul>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#skill-set">Skill Set</a></li>
