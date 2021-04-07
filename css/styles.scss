@@ -47,12 +47,29 @@ body {
             }
         }
     }
-    
+    nav.mobile-nav{
+        grid-area: mobile-menu;
+        background-color: white;
+        display: none;
+        ul {
+            list-style-type: none;
+            li {
+                text-transform: uppercase;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+    .hidden {
+        display: hidden;
+    }
     section#hero-section {
         grid-area: hero-section;
-        padding: 20px;
         display: grid;
         grid-template-columns: 1fr 2fr;
+        padding: 30px;
         background-image: url(https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80);
         background-repeat: no-repeat;
         background-size: cover;
@@ -110,21 +127,24 @@ body {
         background-color: brown;
     }
     footer.footer {
-        height: 400px;
+        grid-area: footer;
+        height: 300px;
+        width: 100%;
         background-color: black;
         color: white;
-        display: flex;
-        justify-content: center;
-        grid-area: footer;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
     }
 
 
 
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 3fr 4fr 2fr;
         grid-template-areas: 
         "navigation"
+        "mobile-menu"
         "hero-section"
         "portfolio"
         "skill-set"
@@ -141,6 +161,13 @@ body {
             }
             li:not(.name) {
                 display: none;
+            }
+        }
+        nav.mobile-nav {
+            display: block;
+            width: 100%;
+            ul {
+                margin-left: 1em;
             }
         }
 

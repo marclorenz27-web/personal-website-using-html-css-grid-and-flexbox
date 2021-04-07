@@ -58,16 +58,39 @@ body nav.navigation ul li.mobile-menu-button {
   display: none;
 }
 
+body nav.mobile-nav {
+  grid-area: mobile-menu;
+  background-color: white;
+  display: none;
+}
+
+body nav.mobile-nav ul {
+  list-style-type: none;
+}
+
+body nav.mobile-nav ul li {
+  text-transform: uppercase;
+}
+
+body nav.mobile-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+body .hidden {
+  display: hidden;
+}
+
 body section#hero-section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: hero-section;
-  padding: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  padding: 30px;
   background-image: url(https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80);
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,28 +167,27 @@ body section#about-me {
 }
 
 body footer.footer {
-  height: 400px;
-  background-color: black;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
+  height: 300px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
 }
 
 @media screen and (max-width: 600px) {
   body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 2fr 3fr 4fr 2fr;
-        grid-template-rows: 1fr 2fr 3fr 4fr 2fr;
-        grid-template-areas: "navigation" "hero-section" "portfolio" "skill-set" "about-me" "footer";
+    -ms-grid-rows: 1fr 1fr 2fr 3fr 4fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 3fr 4fr 2fr;
+        grid-template-areas: "navigation" "mobile-menu" "hero-section" "portfolio" "skill-set" "about-me" "footer";
   }
   body nav.navigation ul {
     -webkit-box-pack: justify;
@@ -180,6 +202,13 @@ body footer.footer {
   }
   body nav.navigation li:not(.name) {
     display: none;
+  }
+  body nav.mobile-nav {
+    display: block;
+    width: 100%;
+  }
+  body nav.mobile-nav ul {
+    margin-left: 1em;
   }
   body section#hero-section {
     -ms-grid-columns: 1fr;
