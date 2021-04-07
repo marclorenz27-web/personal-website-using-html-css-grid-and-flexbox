@@ -259,8 +259,14 @@ body {
         section#portfolio {
             div#projects {
                 grid-template-columns: 1fr;
-
+                
             }
+        }
+        div.skill-and-about-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "skill-set"
+                "about-me";
         }
         footer.footer {
             grid-template-columns: 1fr;

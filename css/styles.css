@@ -340,6 +340,11 @@ body footer.footer .footer-nav-container nav ul li a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  body div.skill-and-about-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "skill-set" "about-me";
+  }
   body footer.footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
