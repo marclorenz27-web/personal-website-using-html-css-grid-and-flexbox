@@ -130,7 +130,7 @@ body section#portfolio {
   -ms-grid-column-span: 4;
   grid-area: portfolio;
   width: 90vw;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 body section#portfolio div#projects {
@@ -187,14 +187,24 @@ body div.skill-and-about-wrapper {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: skill-and-about-wrapper;
-  margin: 0 auto;
+  margin: 2rem auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "skill-set about-me";
 }
 
 body section#skill-set {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: skill-set;
 }
 
 body section#about-me {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: about-me;
 }
 
